@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop Primrose</title>
+    <link rel="stylesheet" href="stylesheet/Style.css">
+    <style>
+        #body {
+            background-color: grey;
+            color: white;
+        }
+        .header {
+            background-image: url("../img/Aurora.jpeg");
+            background-color: cyan;
+            height: 90px;
+            color: white;
+        }
+
+        .header-logo {
+            font-size: 36px;
+            float: left;
+            padding: 20px 40px;
+        }
+
+        .navbar {
+            height: 40px;
+            float: right;
+            color: white;
+            padding: 20px 40px;
+            flex-direction: row;
+        }
+
+        li {
+            list-style-type: none;
+            color: rgb(184, 99, 99);
+        }
+        .contact-form {
+            padding-top:100px;
+        }
+
+        .contact-form input {
+            width: 400px;
+            margin-top:10px;
+            margin-bottom: 30px;
+            padding: 20px;
+            font-size: 18px;
+            border: 1px solid white;
+        }
+
+        .contact-form textarea {
+            width: 400px;
+            margin-top:10px;
+            margin-bottom: 30px;
+            padding: 20px;
+            font-size: 18px;
+            border: 1px solid white;
+        }
+
+        .contact-submit {
+            background: white;
+            color: rgb(77, 76, 76);
+        }
+        
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgb(245, 244, 244);
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+          
+        input[type=submit] {
+            background-color: green;
+            color: rgb(245, 244, 244);
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+          
+        input[type=submit]:hover {
+            background-color: green;
+        }
+
+        .contact-container {
+            border-radius: 5px;
+            background-color: rgb(245, 244, 244);
+            border-bottom: 2px solid navy;
+            font-size: 28px;
+            padding-bottom: 15px;
+            margin-bottom: 50px;
+            flex-grow: 1;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .footer {
+            background-color: skyblue;
+            color: blue;
+            height:120px;
+            padding: 40px;
+        }
+
+        .footer-logo {
+            font-size: 32px;
+            float: left;
+        }
+
+        .footer-list {
+            float: right;
+        }
+
+        .footer-list li {
+            padding-bottom: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .column, input[type=submit] {
+              width: 100%;
+              margin-top: 0;
+              margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body id="body">
+    <button id="darkmode">Darkmode</button>
+    <button id="tekan" onclick="logoWarna">TEKAN</button>
+    <div class="header">
+    <div class="navbar">
+        <a href="index.html">Home</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="about.html">About me</a>
+    </div>
+    </div>
+    <div class="contact-container">
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+          <p>Jika ada yang bisa kami bantu, harap hubungi kami:</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="img/My Location.jpeg" style="width:100%">
+          </div>
+          <div class="column">
+            <form action="/action_page.php">
+              <label for="name">Masukkan Nama Anda</label>
+              <input type="text"  name="nama" placeholder="Isi Nama...">
+              <label for="country">Negara</label>
+              <select id="country" name="country">
+                <option value="indonesia">Indonesia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+              <label for="subject">Pesan</label>
+              <textarea id="subject" name="pesan" placeholder="Tulis Pesan..." style="height:170px"></textarea>
+              <input type="submit" value="Kirim">
+            </form>
+          </div>
+        </div>
+      </div>
+
+    <div class="footer">
+        <div class="footer-logo" style="color: pink;">Welcome To Our Website ! </div>
+        <div class="footer-list">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About me</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
